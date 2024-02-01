@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>Tipping App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="outer-container">
+    <div id="inner-container">
+      <div id="tip-screen-outer">
+        <div id="tip-screen-inner">
+          <div id="bill-container">
+            <label for="bill-input" id="bill-label">ENTER BILL AMOUNT</label>
+            <p id="bill-error" class="error">ENTER VALID AMOUNT</p>
+            
+            <input 
+                type="number" 
+                id="bill-input" 
+                placeholder="0">
+            <p class="currency-rsa">R</p>
+          </div>
+
+          <div id="select-tip-container">
+            <label id="select-tip-label">Select Tip Percentage</label>
+            <div id="select-tip-option-container">
+              <div class="tip-option" id="5">5%</div>
+              <div class="tip-option" id="10">10%</div>
+              <div class="tip-option" id="15">15%</div>
+              <div class="tip-option" id="25">25%</div>
+              <div class="tip-option" id="50">50%</div>
+
+              <input 
+                type="text" 
+                class="tip-option" 
+                id="custom-tip-option" 
+                placeholder="Custom">
+            </div>
+
+          </div>
+
+          <div id="number-of-people-container">
+            <label for="number-of-people-input" id="number-of-people-label">Number of People</label>
+            <p id="number-of-people-error" class="error">ENTER AMOUNT</p>
+            <input 
+                 type="number" 
+                 id="number-of-people-input" 
+                 placeholder="0">
+            <img src="/images/general/icon-person.svg" 
+                 aria-hidden="true" 
+                 id="person-icon" 
+                 class="icon">
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="space"></div>
+      <div id="display-outer">
+        <div id="display-inner">
+
+          <!-- Tip amount / per person, Total / per person -->
+          <div id="tip-details">
+
+            <!-- Tip amount / per person -->
+            <div id="tip-amount-container"  class="detail-container">
+              <div id="tip-amount" class="label-container">
+                <h4>TIP AMOUNT</h4>
+                <span class="per-person">/ PERSON</span>
+              </div>
+
+              <!-- Tip value -->
+              <span id="tip-per-person-value" class="grand-total">R0.00</span>
+            </div>
+
+            <!-- Total amount / per person -->
+            <div id="total-container" class="detail-container">
+              <div id="total-amount" class="label-container">
+                <h4>TOTAL
+                </h4>
+                <span class="per-person">/ PERSON</span>
+              </div>
+
+              <!-- Total value -->
+              <span id="total-per-person-value" class="grand-total">R0.00</span>
+            </div>
+          </div>
+
+          <!-- Reset Button -->
+          <button id="resetBTN">RESET</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
